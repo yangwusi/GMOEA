@@ -107,9 +107,10 @@ class GAN(object):
                 g_train_loss.backward()
                 self.G_optimizer.step()
                 g_train_losses += g_train_loss.cpu()
-            # after each epoch, shuffle the dataset
+            # after each epoch, shuffle the dataset (both pop_dec and label)
             random.shuffle(indices)
             pop_dec = pop_dec[indices, :]
+            label = label[indices]
 
     def generate(self, sample_noises, population_size):
 
