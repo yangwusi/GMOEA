@@ -133,7 +133,7 @@ class IMMOEA_F5(test_problem):
         return in_value, pop_obj
 
 
-class IMMOEA_F6(test_problem):
+class IMMOEA_F6(IMMOEA_F2):
     def __init__(self, m, d, ref_num):
         test_problem.__init__(self, m, d, ref_num)
 
